@@ -1,0 +1,31 @@
+name: Resume StudioNet proof
+on:
+  workflow_dispatch:
+    inputs:
+      journal:
+        description: Public proof journal with the recorded transaction hashes
+        type: string
+        required: true
+permissions:
+  contents: read
+jobs:
+  resume:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci --no-audit --no-fund
+      - name: Restore public journal and resume
+        env:
+          LEAP_SPAN_JOURNAL: ${{ inputs.journal }}
+        run: |
+          node --input-type=module -e 'import { mkdirSync, writeFileSync } from "node:fs"; mkdirSync("proofs/work", { recursive: true }); writeFileSync("proofs/work/proof.json", JSON.stringify(JSON.parse(process.env.LEAP_SPAN_JOURNAL)));'
+          npm run prove -- --resume
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: studionet-journal
+          path: proofs/work/proof.json
