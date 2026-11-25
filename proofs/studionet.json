@@ -1,0 +1,182 @@
+{
+  "network": "studionet",
+  "revision": "fea5adb7ea79d64719d939be96de5a8a2e5f5d28",
+  "source_sha256": "7efc9c33dbafd8ab8a2360198ddeaa9c9f3b315ebb2d5560b5befcdbc39c73bc",
+  "table_id": "66f05f175749c43506c17f9d2cb3289a0a902cc80fee2c3107a4a9872195dcae",
+  "transactions": [
+    {
+      "label": "deploy",
+      "sender": "0x3dc97BF92cec9ac747A412fD4dea478F081Eb157",
+      "test_fee_deposit_wei": "25000000000002588",
+      "evm_hash": "0x81e25a958dd49bde44048c0b7f8b398e70a852ceec59b016bbe14cee06f4d8d5",
+      "hash": "0x81e25a958dd49bde44048c0b7f8b398e70a852ceec59b016bbe14cee06f4d8d5",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "agree": 3,
+      "votes": 5
+    },
+    {
+      "label": "reconcile-time-tables",
+      "sender": "0x701Ca84Ea887A75d77ED9dB9dcDee62D607F06E3",
+      "test_fee_deposit_wei": "125000000000002588",
+      "evm_hash": "0x954d2f72f0152c43d2ff80e5bcfd4780d8179074ad64a30b965962f1c4e23bda",
+      "hash": "0x954d2f72f0152c43d2ff80e5bcfd4780d8179074ad64a30b965962f1c4e23bda",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "agree": 3,
+      "votes": 5,
+      "return_data": "AIQENjZmMDVmMTc1NzQ5YzQzNTA2YzE3ZjlkMmNiMzI4OWEwYTkwMmNjODBmZWUyYzMxMDdhNGE5ODcyMTk1ZGNhZQ=="
+    },
+    {
+      "label": "repeat-unchanged-reconciliation",
+      "sender": "0x50A67afad132aEcFaecaBB1D77a64BB34a3BaC0D",
+      "test_fee_deposit_wei": "125000000000002588",
+      "evm_hash": "0x6124cd35073825a45110ab5187ca4859779fc5e8394063ce7e0c0db72161b03e",
+      "hash": "0x6124cd35073825a45110ab5187ca4859779fc5e8394063ce7e0c0db72161b03e",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "agree": 3,
+      "votes": 5,
+      "return_data": "AIQENjZmMDVmMTc1NzQ5YzQzNTA2YzE3ZjlkMmNiMzI4OWEwYTkwMmNjODBmZWUyYzMxMDdhNGE5ODcyMTk1ZGNhZQ=="
+    }
+  ],
+  "contract": "0x2535DD895A981F1cfb8d2F4bDf626205B477A8Bb",
+  "readback": {
+    "table": {
+      "expires_utc": 1814140800,
+      "sources": [
+        "https://data.iana.org/time-zones/data/leap-seconds.list",
+        "https://maia.usno.navy.mil/ser7/tai-utc.dat"
+      ],
+      "transitions": [
+        [
+          63072000,
+          10
+        ],
+        [
+          78796800,
+          11
+        ],
+        [
+          94694400,
+          12
+        ],
+        [
+          126230400,
+          13
+        ],
+        [
+          157766400,
+          14
+        ],
+        [
+          189302400,
+          15
+        ],
+        [
+          220924800,
+          16
+        ],
+        [
+          252460800,
+          17
+        ],
+        [
+          283996800,
+          18
+        ],
+        [
+          315532800,
+          19
+        ],
+        [
+          362793600,
+          20
+        ],
+        [
+          394329600,
+          21
+        ],
+        [
+          425865600,
+          22
+        ],
+        [
+          489024000,
+          23
+        ],
+        [
+          567993600,
+          24
+        ],
+        [
+          631152000,
+          25
+        ],
+        [
+          662688000,
+          26
+        ],
+        [
+          709948800,
+          27
+        ],
+        [
+          741484800,
+          28
+        ],
+        [
+          773020800,
+          29
+        ],
+        [
+          820454400,
+          30
+        ],
+        [
+          867715200,
+          31
+        ],
+        [
+          915148800,
+          32
+        ],
+        [
+          1136073600,
+          33
+        ],
+        [
+          1230768000,
+          34
+        ],
+        [
+          1341100800,
+          35
+        ],
+        [
+          1435708800,
+          36
+        ],
+        [
+          1483228800,
+          37
+        ]
+      ]
+    },
+    "round_trips": [
+      {
+        "utc": "2016-12-31T23:59:59Z",
+        "tai": 1483228835
+      },
+      {
+        "utc": "2016-12-31T23:59:60Z",
+        "tai": 1483228836
+      },
+      {
+        "utc": "2017-01-01T00:00:00Z",
+        "tai": 1483228837
+      }
+    ],
+    "elapsed_seconds": 2
+  }
+}

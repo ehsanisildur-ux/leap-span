@@ -2,7 +2,7 @@
 
 LeapSpan computes UTC–TAI conversions and elapsed time from an independently reconciled leap-second schedule. It preserves the inserted `23:59:60Z` label and gives it its own TAI second.
 
-[Contract source](contracts/leap_span.py) · [Direct tests](tests/direct/test_leap_span.py)
+[Contract source](contracts/leap_span.py) · [StudioNet proof](#studionet-proof) · [Direct tests](tests/direct/test_leap_span.py) · [Submission text](SUBMISSION.md)
 
 | UTC label | TAI seconds since 1970-01-01 00:00:00 TAI |
 | --- | ---: |
@@ -36,3 +36,14 @@ python -m pytest tests/direct -q
 ```
 
 Tests exercise all 27 historical positive leap seconds in the captured schedule, a synthetic negative leap, source disagreement, and attempts to revise published coverage.
+
+## StudioNet proof
+
+The deployment and both live reconciliations finalized. Both reconciliations returned the same schedule digest. The stored table contains the 1972 baseline and 27 positive leap seconds, with an exclusive coverage expiry of `2027-06-28T00:00:00Z`. Public RPC reads verified all three UTC–TAI round trips in the example and the two-second elapsed result.
+
+[Deployed contract](https://explorer-studio.genlayer.com/address/0x2535DD895A981F1cfb8d2F4bDf626205B477A8Bb) · [Proof ledger](proofs/studionet.json) · [Hosted proof run](https://github.com/ehsanisildur-ux/leap-span/actions/runs/45695701594)
+
+```sh
+npm ci
+npm run verify
+```
